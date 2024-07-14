@@ -3,7 +3,7 @@ version: 0.2
 env:
   variables:
     IMAGE_REPO_NAME: "coworking-analytics"  # Replace with your ECR repository name
-    IMAGE_TAG: "$CODEBUILD_BUILD_NUMBER"
+    IMAGE_TAG: $CODEBUILD_BUILD_NUMBER
     AWS_REGION: "us-east-1"  # Replace with your AWS region
 
 phases:
