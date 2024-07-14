@@ -3,6 +3,15 @@ The Coworking Space Service is a set of APIs that enables users to request one-t
 
 For this project, you are a DevOps engineer who will be collaborating with a team that is building an API for business analysts. The API provides business analysts basic analytics data on user activity in the service. The application they provide you functions as expected locally and you are expected to help build a pipeline to deploy it in Kubernetes.
 
+# Application change flow
+
+1. If you are required to make any changes in the docker image which application uses.
+2. It will be a streamlined process as I have coordinate the AWS Code build with the git hub.
+3. Any push in the git hub docker file will trigger the creation of the new Image and new Image will be pushed to   the ECR repostory.
+5. The you can again apply the coworking yaml file after changing just the image tag in the deployment yaml for the application pods to use the updated Image.
+
+Application Working URL-> curl a17a7a7f7a6c64675a89b9558087030d-969353927.us-east-1.elb.amazonaws.com:5153/api/reports/daily_usage
+
 ## Getting Started
 
 ### Dependencies
