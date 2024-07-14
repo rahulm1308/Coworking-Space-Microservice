@@ -15,7 +15,8 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t $IMAGE_REPO_NAME:$IMAGE_TAG /c/Udacity-Nanodgree/Coworking-Space-Microservice/analytics
+      - docker build -t $IMAGE_REPO_NAME:$IMAGE_TAG ./analytics/
+      - docker images  # List Docker images to verify the image was built
       - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG 825222744444.dkr.ecr.$AWS_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
   post_build:
     commands:
